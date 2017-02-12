@@ -1,0 +1,42 @@
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="test.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:700" rel="stylesheet">
+</head>
+<head>
+<body>
+  <div class="bg-dark">
+    <div class="container-fluid container-table">
+      <div class="row vertical-center-row">
+        <h1 class="codewa text-center">
+          <span class="brackets"><</span>
+          <span class="brand">codeWA</span>
+          <span class="brackets">/></span>
+        </h1>
+        <!-- <div class="text-center col-md-4 col-md-offset-4" style="background:red">TEXT</div> -->
+        <ul class="codewa list-inline text-center">
+          <li><h4>{LocalEvents}</h4></li>
+            <li><h4>{Hackathons}<h4></li>
+          <li><h4>{Job Advertisements}<h4></li>
+          <li><h4>{Career Spotlights}<h4></li>
+        </ul>
+        <div class="container-fluid text-center" onclick="myFunction()">
+          <button class="btn btn-primary">Sign Up</button>
+        </div>
+        <form>
+          <div class="form-group" id="email-input" >
+            <input type="email" class = "form-control" id="emailinput" placeholder="Email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+    function myFunction() {
+        document.getElementById("email-input").style.display = "block";
+      }
+    </script>
+  </div>
+  <body>

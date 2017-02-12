@@ -1,0 +1,37 @@
+.height-full {
+  height: 100vh;
+}
+
+html, body, .container-table {
+   height: 100%;
+}
+
+.codewa{
+    font-family: 'Inconsolata', monospace;
+}
+
+.brackets{
+  color: orange;
+}
+
+.li{
+  font-size: 30px;
+}
+
+.bg-dark {
+  background-color: #3399FF;
+  color: #fff;
+}
+.container-table {
+    display: table;
+}
+
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.form-group {
+  padding-top: 20px;
+  display: none;
+}
