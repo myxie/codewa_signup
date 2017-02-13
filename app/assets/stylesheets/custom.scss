@@ -1,12 +1,13 @@
-/*/*/*.height-full {
-  height: 100vh;
-}*/
+// Place all the styles related to the signup controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*html{
-  height: 100%;
+height-full {
+  height: 100vh;
 }
+
 html, body, .container-table {
-   height: 100%;
+   height:  100vh;
 }
 
 .codewa{
@@ -25,16 +26,16 @@ html, body, .container-table {
   background-color: #3399FF;
   color: #fff;
 }
-/*.container-table {
+.container-table {
     display: table;
 }
 
 .vertical-center-row {
     display: table-cell;
     vertical-align: middle;
-}*/
+}
 
 .form-group {
   padding-top: 20px;
   display: none;
-}*/*/
+}
