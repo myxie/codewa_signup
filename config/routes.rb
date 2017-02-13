@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'signup/index'
-
-  root 'signup#index'
+  resources :signups, only: [:new, :create]
+  root 'signups#new'			
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
