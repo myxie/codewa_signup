@@ -1,6 +1,8 @@
 // Place all the styles related to the signup controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 height-full {
   height: 100vh;
@@ -43,4 +45,17 @@ html, body, .container-table {
 
 .submit-button {
   width:40px;
+}
+
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+}
+
+.email{
+  @extend .col-md-6;
+}
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
 }

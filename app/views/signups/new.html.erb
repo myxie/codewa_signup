@@ -26,14 +26,14 @@
         </div>
         <div class="form-group" id="email-input">
           <%=form_for @signup do |f| %>
-            <p><%= f.text_area :email %></p>
-            <p><%= f.button :submit, :class => "submit"%></p>
+              <%= f.email_field :email, :class => "email form-control"%>
+              <%= f.button :submit, :class => "submit text-center"%>
+            </div>
           <% end %>
+
           <!-- <div class="form-group" id="email-input" >
             <input type="email" class = "form-control" id="emailinput" placeholder="Email">
             <input type="submit" class = "submit-button form-control btn-primary" value="Submit"> -->
-          </div>
-        </form>
       </div>
     </div>
     <script>
