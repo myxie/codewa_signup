@@ -38,24 +38,26 @@ html, body, .container-table {
 }
 
 .form-group {
-  padding-top: 20px;
-  display: none;
-  width: 100%;
-}
-
-.submit-button {
-  width:40px;
+ padding-top: 20px;
+ width: 100%;
 }
 
 .form-centered {
-  @extend .col-md-6;
-  @extend .text-center;
+  @extend .col-md-12;
 }
 
 .email{
-  @extend .col-md-6;
+  @extend .col-sm-9 ;
+  padding-bottom: 15px;
+  width: 100%;
 }
+
 .submit {
   @extend .btn;
   @extend .btn-primary;
 }
+
+.submit-center {
+   margin: 20px; 
+}
+

@@ -14,32 +14,24 @@
           <span class="brand">codeWA</span>
           <span class="brackets">/></span>
         </h1>
-        <!-- <div class="text-center col-md-4 col-md-offset-4" style="background:red">TEXT</div> -->
-        <ul class="codewa list-inline text-center">
-          <li><h4>{Workshops}</h4></li>
-            <li><h4>{Hackathons}<h4></li>
-          <li><h4>{Job Advertisements}<h4></li>
-          <li><h4>{Career Spotlights}<h4></li>
-        </ul>
-        <div class="container-fluid text-center" onclick="myFunction()">
-          <button class="btn btn-primary">Sign Up</button>
-        </div>
-        <div class="form-group" id="email-input">
-          <%=form_for @signup do |f| %>
-              <%= f.email_field :email, :class => "email form-control"%>
-              <%= f.button :submit, :class => "submit text-center"%>
-            </div>
+            <%=form_for :signup, url: signups_path, :class=>"form-inline" do |f| %>
+            <% if @signup.errors.any? %>
+                  <div id = "error-explanation">
+                    <h2>
+                        <%pluralize(@signup.errors.count, "error") %>
+                        Don't allow this email to be used
+                    </h2>
+                    <ul>
+                        <% @signup.errors.full_messages.each do |msg| %>
+                            <li><%=msg %></li>
+                        <% end %>
+                    </ul>
+            <% end %>
+            <div class="container-fluid text-center">
+                <%= f.email_field :email, :class => "email form-control input-xlarge"%> <%= f.button :submit,:class => "submit text-center form-inline submit-center"%></div>
           <% end %>
-
-          <!-- <div class="form-group" id="email-input" >
-            <input type="email" class = "form-control" id="emailinput" placeholder="Email">
-            <input type="submit" class = "submit-button form-control btn-primary" value="Submit"> -->
+          </div>
       </div>
     </div>
-    <script>
-    function myFunction() {
-        document.getElementById("email-input").style.display = "block";
-      }
-    </script>
   </div>
 <body>

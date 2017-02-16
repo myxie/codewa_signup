@@ -1,5 +1,8 @@
 class SignupsController < ApplicationController
-  
+
+  def index
+      @signup = Signup.all
+  end   
   def new
     @signup= Signup.new
   end
@@ -9,7 +12,7 @@ class SignupsController < ApplicationController
       if @signup.save
       	redirect_to root_path, notice: "Signed up #{@signup.email}."
     else
-      render :new
+      render 'new'
     end
   end
 

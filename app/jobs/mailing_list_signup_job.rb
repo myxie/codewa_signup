@@ -1,14 +1,13 @@
 class MailingListSignupJob < ApplicationJob
-  queue_as :default
 
-  def perform(*args)
-    # Do something later
-    logger.info "signing up #{user.email}"
+  def perform(user)
+    Rails.logger.info "signing up #{user.email}"
     subscribe(user)
   end
 
   def subscribe(user)
     mailchimp = Gibbon::Request.new(api_key: Rails.application.secrets.mailchimp_api_key)
+    Rails.logger.info("API_KEY = #{Rails.application.secrets.mailchimp_api_key}")
     list_id = Rails.application.secrets.mailchimp_list_id
     result = mailchimp.lists(list_id).members.create(
       body: {
