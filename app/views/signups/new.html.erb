@@ -4,6 +4,7 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:700" rel="stylesheet">
+    <meta name='viewport' content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
   <div class="bg-dark">
@@ -39,6 +40,7 @@
                       <p id="notice"><%= flash[:notice]  %></p>
                 <% end %>
                 <%= f.submit "Signup", :class => "submit text-center form-inline submit-center"%>
+                <div class="beta"> <p> This site is currently in beta </p><div>
            </div>
           <% end %>
           </div>
