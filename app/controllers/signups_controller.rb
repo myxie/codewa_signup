@@ -1,8 +1,8 @@
 class SignupsController < ApplicationController
 
-  def index
-      @signup = Signup.all
-  end   
+  # def index
+  #     @signup = Signup.all
+  # end   
   def new
     @signup= Signup.new
   end

@@ -14,6 +14,12 @@
           <span class="brand">codeWA</span>
           <span class="brackets">/></span>
         </h1>
+        <ul class="codewa list-inline text-center">
+          <li><h4>{Workshops}</h4></li>
+            <li><h4>{Hackathons}<h4></li>
+          <li><h4>{Job Advertisements}<h4></li>
+          <li><h4>{Career Spotlights}<h4></li>
+        </ul>
             <%=form_for :signup, url: signups_path, :class=>"form-inline" do |f| %>
             <% if @signup.errors.any? %>
                   <div id = "error-explanation">
@@ -28,7 +34,9 @@
                     </ul>
             <% end %>
             <div class="container-fluid text-center">
-                <%= f.email_field :email, :class => "email form-control input-xlarge"%> <%= f.button :submit,:class => "submit text-center form-inline submit-center"%></div>
+                <%= f.email_field :email,:placeholder => 'example@gmail.com', :class => "email form-control input-xlarge"%> 
+                <%= f.submit "Signup", :class => "submit text-center form-inline submit-center"%>
+            </div>
           <% end %>
           </div>
       </div>
