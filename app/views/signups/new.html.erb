@@ -1,9 +1,11 @@
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
 
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:700" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
     <meta name='viewport' content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
@@ -35,16 +37,25 @@
                     </ul>
             <% end %>
             <div class="container-fluid text-center">
-                <%= f.email_field :email,:placeholder => 'example@gmail.com', :class => "email form-control input-xlarge"%> 
+                <%= f.email_field :email,:placeholder => 'example@gmail.com', :class => "email form-control input-xlarge"%>
                 <% if flash[:notice] %>
                       <p id="notice"><%= flash[:notice]  %></p>
                 <% end %>
                 <%= f.submit "Signup", :class => "submit text-center form-inline submit-center"%>
-                <div class="beta"> <p> This site is currently in beta </p><div>
-           </div>
-          <% end %>
+               <% end %>
           </div>
-      </div>
     </div>
   </div>
-<body>
+  <div id="footer">
+    <div class="container-fluid containter-table text-center footer-padding">
+      <div style="display:inline-block;">
+        <p>Powered by</p>
+      </div>
+      <!-- <div style="display:inline-block;vertical-align:top;position:relative"> -->
+        <%= link_to image_tag("bloom-60.png"), "http://www.bloom.org.au" %>
+</div>
+</div>
+</div>
+ </div>
+</body>
+</html>
