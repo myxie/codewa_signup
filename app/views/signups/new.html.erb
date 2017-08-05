@@ -1,18 +1,21 @@
-<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
 
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:700" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
+    <meta name='viewport' content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
 <body>
   <div class="bg-dark">
     <div class="container-fluid container-table">
       <div class="row vertical-center-row">
         <h1 class="codewa text-center">
-          <span class="brackets"><</span>
+          <span class="brackets">&lt/</span>
           <span class="brand">codeWA</span>
-          <span class="brackets">/></span>
+          <span class="brackets">></span>
         </h1>
         <ul class="codewa list-inline text-center">
           <li><h4>{Workshops}</h4></li>
@@ -25,7 +28,7 @@
                   <div id = "error-explanation">
                     <h2>
                         <%pluralize(@signup.errors.count, "error") %>
-                        Don't allow this email to be used
+                        Unfortunately, there were errors in your email address.
                     </h2>
                     <ul>
                         <% @signup.errors.full_messages.each do |msg| %>
@@ -34,12 +37,25 @@
                     </ul>
             <% end %>
             <div class="container-fluid text-center">
-                <%= f.email_field :email,:placeholder => 'example@gmail.com', :class => "email form-control input-xlarge"%> 
+                <%= f.email_field :email,:placeholder => 'example@gmail.com', :class => "email form-control input-xlarge"%>
+                <% if flash[:notice] %>
+                      <p id="notice"><%= flash[:notice]  %></p>
+                <% end %>
                 <%= f.submit "Signup", :class => "submit text-center form-inline submit-center"%>
-            </div>
-          <% end %>
+               <% end %>
           </div>
-      </div>
     </div>
   </div>
-<body>
+  <div id="footer">
+    <div class="container-fluid containter-table text-center footer-padding">
+      <div style="display:inline-block;">
+        <p>Powered by</p>
+      </div>
+      <!-- <div style="display:inline-block;vertical-align:top;position:relative"> -->
+        <%= link_to image_tag("bloom-60.png"), "http://www.bloom.org.au" %>
+</div>
+</div>
+</div>
+ </div>
+</body>
+</html>
