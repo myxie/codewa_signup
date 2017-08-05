@@ -15,5 +15,6 @@ class MailingListSignupJob < ApplicationJob
         status: 'subscribed'
     })
     Rails.logger.info("Subscribed #{user.email} to MailChimp") if result
+    Rails.logger.info("#{SuckerPunch::Queue.all}")
   end 
 end
